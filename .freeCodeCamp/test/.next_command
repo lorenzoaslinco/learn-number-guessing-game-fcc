@@ -1,0 +1,64 @@
+mkdir number_guessing_game
+cd number_guessing_game/
+touch number_guess.sh
+chmod +x number_guess.sh
+git init
+git checkout main
+git checkout -b main
+git branch
+git checkout main
+git status
+git add number_guess.sh
+git commit -m "Initial commit"
+git log --oneline
+psql --username=freecodecamp --dbname=postgres
+git branch
+git checkout -b feat/set-up-vars-and-db-connection
+git branch
+nano number_guess.sh
+git status
+git add number_guess.sh
+git commit -m "feat: set up vars and db connection"
+git status
+git checkout main
+git merge feat/set-up-vars-and-db-connection
+git branch
+git branch -d feat/set-up-vars-and-db-connection
+git branch
+git checkout -b feat/handle-new-and-returning-users
+nano number_guess.sh
+git status
+git add number_guess.sh
+git commit -m "feat: handle new and returning users"
+git checkout main
+git merge feat/handle-new-and-returning-users
+git branch -d feat/handle-new-and-returning-users
+git checkout -b feat/generate-random-number-and-prompt-for-guesses
+nano number_guess.sh
+git status
+git add number_guess.sh
+git commit -m "feat: generate random number and prompt for guesses"
+git checkout main
+git branch
+git merge feat/generate-random-number-and-prompt-for-guesses
+git branch -d feat/generate-random-number-and-prompt-for-guesses
+git branch
+git checkout -b feat/update-database-with-game-results
+nano number_guess.sh
+git status
+git add number_guess.sh
+git commit -m "feat: update database with game results"
+git status
+git checkout main
+git merge feat/update-database-with-game-results
+git branch
+git branch -d feat/update-database-with-game-results
+git log --oneline
+pg_dump -cC --inserts -U freecodecamp number_guess > number_guess.sql
+git branch
+git status
+git add .
+git commit -m "final commit"
+git status
+git commit --amend
+git log --oneline
